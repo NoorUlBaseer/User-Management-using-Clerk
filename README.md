@@ -145,14 +145,11 @@ After starting both the backend and frontend:
 
 ## Troubleshooting
 
-### Missing Clerk Key
-Ensure that the Clerk API keys are correctly placed in your `.env` files. Double-check that the keys are from your Clerk account.
+- **Missing Clerk Key:** Ensure that the Clerk API keys are correctly placed in your `.env` files. Double-check that the keys are from your Clerk account.
 
-### Backend Errors
-Check the server logs for specific error messages and ensure that the Clerk SDK is correctly initialized.
+- **Backend Errors:** Check the server logs for specific error messages and ensure that the Clerk SDK is correctly initialized.
 
-### CORS Issues
-If you encounter CORS issues, ensure that `cors()` middleware is correctly set up in the `backend/index.js` file.
+- **CORS Issues:** If you encounter CORS issues, ensure that `cors()` middleware is correctly set up in the `backend/index.js` file.
 
 Please review these troubleshooting steps if you encounter any issues while running the application. If the problem persists, feel free to reach out for further assistance.
 
