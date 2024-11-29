@@ -1,70 +1,132 @@
-# Getting Started with Create React App
+# User Management and Authentication using Clerk 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+This is a full-stack authentication application built with React, Node, and Express, utilizing Clerk for robust, secure user authentication. The application provides a seamless sign-in, sign-up, and dashboard experience with protected routes.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- User Authentication with Clerk
+- Protected Dashboard Route
+- Responsive Design
+- Automatic Redirection for Authenticated Users
+- Secure Sign-In and Sign-Up Modals
+- One-Click Sign Out
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technologies Used
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Frontend**: 
+  - React
+  - React Router
+  - Clerk React SDK
+  - Axios
 
-### `npm test`
+- **Backend**:
+  - Express.js
+  - Clerk Node.js SDK
+  - CORS
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Prerequisites
 
-### `npm run build`
+Before you begin, ensure you have the following installed:
+- Node.js (v14 or later)
+- npm 
+- A Clerk account
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Setup and Installation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/NoorUlBaseer/User-Management-using-Clerk.git
+   cd <project-directory>
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. **Backend Setup**
+   ```bash
+   cd <project-directory>
+   npm install
+   ```
+   **Note**: Do not navigate directly into the `backend` folder for backend setup.
 
-### `npm run eject`
+3. **Frontend Setup**
+   ```bash
+   cd frontend
+   npm install
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+4. **Environment Configuration**
+   Create `.env` files in both `backend` and `frontend` folders:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   **Backend `.env`**:
+   ```
+   CLERK_PUBLISHABLE_KEY=your_publishable_key
+   CLERK_SECRET_KEY=your_clerk_secret_key
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+   **Frontend `.env`**:
+   ```
+   REACT_APP_CLERK_PUBLISHABLE_KEY=your_publishable_key
+   CLERK_SECRET_KEY=your_clerk_secret_key
+   ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+   *Note*: Obtain these keys from your [Clerk Dashboard](https://dashboard.clerk.dev/)
 
-## Learn More
+5. **Running the Application**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+   Start the Backend:
+   ```bash
+   cd <project-directory>
+   npm run dev
+   ```
+   **Note**: Do not navigate into the `backend` folder, as the `package.json` file is configured to run the `backend/index.js`. 
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+   Start the Frontend:
+   ```bash
+   cd frontend
+   npm run dev
+   ```
 
-### Code Splitting
+## Application Flow
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1. Users land on the Home page with Sign In and Sign Up buttons
+2. Clicking these opens Clerk's authentication modal
+3. After successful authentication, users are redirected to their personalized dashboard
+4. Dashboard displays user information like user ID, username, and email
+5. Users can sign out directly from the dashboard
 
-### Analyzing the Bundle Size
+## Security Features
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- Protected routes using Clerk's `SignedIn` and `SignedOut` components
+- Automatic redirection for unauthenticated users
+- Secure sign-out before window/tab closure
+- Server-side user verification
 
-### Making a Progressive Web App
+## Customization
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- Modify `styles.css` to change application styling
+- Adjust route configurations in `App.js`
+- Customize dashboard display in `Dashboard.js`
 
-### Advanced Configuration
+## Error Handling
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- Console logs for authentication and data fetching errors
+- User-friendly loading states
+- Fallback routes for authentication
 
-### Deployment
+## Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+1. Fork the repository
+2. Create your feature branch
+3. Commit your changes 
+4. Push to the branch 
+5. Open a Pull Request
 
-### `npm run build` fails to minify
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Distributed under the MIT License. See [LICENSE](LICENSE.txt) for more information.
+
+## Contact
+
+Noor Ul Baseer - [noorulbaseer2021@gmail.com]
+
+Project Link: https://github.com/NoorUlBaseer/User-Management-using-Clerk.git
