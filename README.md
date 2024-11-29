@@ -26,6 +26,14 @@ This is a full-stack authentication application built with React, Node, and Expr
   - Clerk Node.js SDK
   - CORS
 
+## Application Flow
+
+1. Users land on the Home page with Sign In and Sign Up buttons
+2. Clicking these opens Clerk's authentication modal
+3. After successful authentication, users are redirected to their personalized dashboard
+4. Dashboard displays user information like user ID, username, and email
+5. Users can sign out directly from the dashboard
+
 ## Prerequisites
 
 Before you begin, ensure you have the following installed:
@@ -86,13 +94,35 @@ Before you begin, ensure you have the following installed:
    npm run dev
    ```
 
-## Application Flow
+## Using the Application
 
-1. Users land on the Home page with Sign In and Sign Up buttons
-2. Clicking these opens Clerk's authentication modal
-3. After successful authentication, users are redirected to their personalized dashboard
-4. Dashboard displays user information like user ID, username, and email
-5. Users can sign out directly from the dashboard
+After starting both the backend and frontend:
+
+1. **Access the Application**
+   - Open a web browser
+   - Navigate to `http://localhost:3000` (default React development server)
+
+2. **Landing Page**
+   - You'll see the home page with "Sign In" and "Sign Up" buttons
+
+3. **Authentication**
+   - Click "Sign Up" to create a new account
+     - Enter your email
+     - Create a password
+     - Complete any additional verification steps
+   - Or click "Sign In" if you already have an account
+
+4. **Dashboard Access**
+   - After successful authentication, you'll be automatically redirected to your personal dashboard
+   - The dashboard displays:
+     - Personalized welcome message
+     - Your User ID
+     - Username (if set)
+     - Email address
+
+5. **Signing Out**
+   - On the dashboard, click the "Sign Out" button to log out
+   - You'll be redirected back to the home page
 
 ## Security Features
 
@@ -112,6 +142,19 @@ Before you begin, ensure you have the following installed:
 - Console logs for authentication and data fetching errors
 - User-friendly loading states
 - Fallback routes for authentication
+
+## Troubleshooting
+
+### Missing Clerk Key
+Ensure that the Clerk API keys are correctly placed in your `.env` files. Double-check that the keys are from your Clerk account.
+
+### Backend Errors
+Check the server logs for specific error messages and ensure that the Clerk SDK is correctly initialized.
+
+### CORS Issues
+If you encounter CORS issues, ensure that `cors()` middleware is correctly set up in the `backend/index.js` file.
+
+Please review these troubleshooting steps if you encounter any issues while running the application. If the problem persists, feel free to reach out for further assistance.
 
 ## Contributing
 
