@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useAuth, SignOutButton } from '@clerk/clerk-react';
-import axios from 'axios';
+import axiosInstance from '../utils/axiosInstance';
 
 const Dashboard = () => {
   const { userId, signOut } = useAuth();
@@ -10,7 +10,7 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchUserDetails = async () => {
       try {
-        const response = await axios.get(`http://localhost:3001/${userId}/dashboard`);
+        const response = await axiosInstance.get(`/${userId}/dashboard`);
         setUserDetails(response.data);
       } catch (error) {
         console.error(error);
