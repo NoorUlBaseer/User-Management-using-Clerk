@@ -103,7 +103,7 @@ After starting both the backend and frontend:
    - Navigate to `http://localhost:3000` (default React development server)
 
 2. **Landing Page**
-   - You'll see the home page with "Sign In" and "Sign Up" buttons
+   - You'll see the home page with "Sign In" and "Sign Up" buttons.
 
 3. **Authentication**
    - Click "Sign Up" to create a new account.
@@ -126,8 +126,8 @@ After starting both the backend and frontend:
 
 ## Security Features
 
-- Protected routes using Clerk's `SignedIn` and `SignedOut` components
-- Automatic redirection for unauthenticated users
+- Protected routes using Clerk's `SignedIn` and `SignedOut` components.
+- Automatic redirection for unauthenticated users.
 - Secure sign-out before window/tab closure
 - Server-side user verification
 
@@ -139,7 +139,7 @@ After starting both the backend and frontend:
 
 ## Error Handling
 
-- Console logs for authentication and data fetching errors
+- Console logs for authentication and data fetching errors.
 - User-friendly loading states
 - Fallback routes for authentication
 
